@@ -1,0 +1,417 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html class="fixed sidebar-left-collapsed">
+<head runat="server">
+    <meta charset="UTF-8">
+
+    <title>SONICO PRODUCTION APPPLICATION</title>
+
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Web Fonts  -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+<%--    <link rel="stylesheet" href="assets/vendor/magnific-popup/magnmoific-popup.css" />--%>
+<%--    <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/datepicker3.css" />--%>
+
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="assets/vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css" />
+<%--    <link rel="stylesheet" href="assets/vendor/morris/morris.css" />--%>
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/theme.css" />
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
+
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
+
+    <!-- Head Libs -->
+    <script src="assets/vendor/modernizr/modernizr.js"></script>
+
+    <style>
+p.ex1 {
+  font-size: 30px;
+}
+p.ex2 {
+  font-size: 50px;
+}
+</style>
+
+</head>
+<body>
+    <section class="body">
+
+        <!-- start: header -->
+
+        <header class="header">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <img src="img/logo-new.png" height="45" style="width:100%" />
+<%--                    <p class="ex2">SONICO</p>--%>
+
+                </a>
+               <%-- <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-opened" onload="closed">
+                    <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                </div>--%>
+                <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+
+            </div>
+            <span class="separator"></span>
+
+            <!--middle-->
+
+
+            <asp:Label ID="label_task" runat="server" Text="PRODUCTION APPLICATION" CssClass="h4"></asp:Label>
+
+
+            <span class="separator"></span>
+
+            <!--middle-->
+            <!-- start: search & user box -->
+            <div class="header-right">
+
+
+
+
+
+
+
+                <div id="userbox2" class="userbox">
+                    <a href="#" data-toggle="dropdown">
+                        <figure class="profile-picture">
+                            <img src="assets/images/!logged-user.jpg"  class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
+                        </figure>
+                        <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@JSOFT.com">
+                            <span class="name">
+                                <asp:Label ID="lblUserName" runat="server" Text=""></asp:Label></span>
+                           <%-- <span class="role">administrator</span>--%>
+                        </div>
+
+                        <i class="fa custom-caret"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <ul class="list-unstyled">
+                            <li class="divider"></li>
+                            <li>
+                                <a role="menuitem" tabindex="-1" href="LoginPage.aspx"><i class="fa fa-power-off"></i> Logout </a>
+                            </li>
+
+                            <%--<li>
+                                <a role="menuitem" tabindex="-1" href="#"><i class="fa fa-refresh"></i> Reset Password</a>
+                            </li>--%>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <!-- end: search & user box -->
+
+        </header>
+
+
+
+        <!-- end: header -->
+
+        <div class="inner-wrapper">
+            <!-- start: sidebar -->
+            <aside id="sidebar-left" class="sidebar-left">
+
+                <div class="sidebar-header">
+                    <%--<div class="sidebar-title">
+                        Navigation
+                    </div>--%>
+
+                    <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+                        <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                    </div>
+
+                   
+                </div>
+
+                <div class="nano">
+                    <div class="nano-content">
+                        <nav id="menu" class="nav-main" role="navigation">
+                            <ul class="nav nav-main">
+
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-money" aria-hidden="true"></i>
+                                        <span>RMPurchase</span>
+                                    </a>
+                                    <ul class="nav nav-children" style="background-color:whitesmoke">
+                                        <li id="linewreqmat" runat="server">
+
+                                            <a href="Rawmatentry.aspx">
+                                                Raw Material Entry
+                                                
+
+                                            </a>
+                                            <a href="ApprovalEntry.aspx">
+                                                RM Entry Approval
+    
+
+                                            </a>
+                                             <a href="MiscAddSub.aspx">
+     Misc Add Sub Entry
+    
+
+  </a>
+                                           
+                                            
+                                            <a href="datewise_report.aspx" target="_blank">
+                                            DateWise RM Report 
+    
+
+                                            </a>
+                                             <a href="RMreportBillNo.aspx" target="_blank">
+                                              BillNo. RM Report 
+    
+
+                                              </a>
+                                             <a href="RM_STOCK_REPORT.aspx" target="_blank">
+RM Stock Report 
+    
+
+ </a>
+                                        </li>
+                                    
+                                    </ul>
+                                </li>
+                                <li class="nav-parent">
+    <a>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        <span>Re-Work</span>
+    </a>
+    <ul class="nav nav-children" style="background-color:whitesmoke">
+       <li id="li1" runat="server">
+
+            <a href="ReductionEntry.aspx">
+                Reduction
+
+            </a>
+        </li>
+        <li id="Li2" runat="server">
+            <a href="ReworkEntry.aspx">
+               Addition
+            </a>
+        </li>
+
+
+        <li id="Li3" runat="server">
+            <a href="CompositeReworkEntry.aspx">
+                Re-Work
+            </a>
+        </li>
+    </ul>
+</li>
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <span>Administrator</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                       <li id="linewuserreg" runat="server">
+
+                                            <a href="#">
+                                                New User Registration
+
+                                            </a>
+                                        </li>
+                                        <li id="lmodifyuserdtl" runat="server">
+                                            <a href="#">
+                                                Modify User Details
+                                            </a>
+                                        </li>
+
+
+                                        <li id="Liactivatedeactivateuser" runat="server">
+                                            <a href="#">
+                                                Activate/De-activate User
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-scissors" aria-hidden="true"></i>
+                                        <span>SHEARING</span>
+                                    </a>
+                                    <%--<ul class="nav nav-children">
+                                      
+                                         <li id="itemMaster" runat="server">
+<%--                                            <a href="itemMaster.aspx">--%>
+                                                                                         <a <%--href="itemMaste.aspx">
+
+                                               New item Entry
+                                            </a>
+                                        </li>
+
+
+                                        <li id="shearing" runat="server">
+                                            <a href="ShearingEntry.aspx">
+                                                Shearing Entry
+                                            </a>
+                                        </li>
+                                         <li id="ShearingApproval" runat="server">
+     <a href="ShearingApproval.aspx">
+         Shearing Approval
+     </a>
+ </li>
+                                    </ul>--%>--%>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+                        <hr class="separator" />
+
+
+
+                        <hr class="separator" />
+
+
+                    </div>
+
+                </div>
+
+            </aside>
+            <!-- end: sidebar -->
+
+            <section role="main" class="content-body">
+                <header class="page-header">
+                    <%--						<h2>Dashboard</h2>--%>
+                    <asp:Label ID="Label1" runat="server" Text="" CssClass="h2" ForeColor="White"></asp:Label>
+
+
+
+                    <div class="right-wrapper pull-right">
+
+
+                        <ol class="breadcrumbs">
+                            <li>
+                                <a href="Dashboard.aspx">
+                                    <i class="fa fa-dashboard"></i>
+                                </a>
+                            </li>
+                            <li><span>Dashboard</span></li>
+                        </ol>
+
+                        <%--							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>--%>
+
+                    </div>
+                </header>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+                </asp:ContentPlaceHolder>
+
+            </section>
+        </div>
+
+
+    </section>
+    <div id="layoutSidenav_content">
+
+
+        <main>
+            <div class="container-fluid">
+                <div class="container body-content">
+
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                    </asp:ContentPlaceHolder>
+
+
+                    <%--<asp:scriptmanager runat="server">
+
+                    </asp:scriptmanager>--%>
+
+                    <%--<hr />--%>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">SONICO</div>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        &middot;
+                        <a href="#">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Vendor -->
+    <%--
+    <script src="assets/vendor/jquery/jquery.js"></script>--%> <%--add this linein each webform to make the menu dropdowns work-- %>--%>
+    <script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
+    <%--
+    <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
+    <script src="assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+
+    <!-- Specific Page Vendor -->
+    <%--
+    <script src="assets/vendor/jquery-ui/js/jquery-ui-1.10.4.custom.js"></script>
+    <script src="assets/vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.js"></script>
+    <script src="assets/vendor/jquery-appear/jquery.appear.js"></script>
+    <script src="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+    <script src="assets/vendor/jquery-easypiechart/jquery.easypiechart.js"></script>
+    <script src="assets/vendor/flot/jquery.flot.js"></script>
+    <script src="assets/vendor/flot-tooltip/jquery.flot.tooltip.js"></script>
+    <script src="assets/vendor/flot/jquery.flot.pie.js"></script>
+    <script src="assets/vendor/flot/jquery.flot.categories.js"></script>
+    <script src="assets/vendor/flot/jquery.flot.resize.js"></script>
+    <script src="assets/vendor/jquery-sparkline/jquery.sparkline.js"></script>
+    <script src="assets/vendor/raphael/raphael.js"></script>
+    <script src="assets/vendor/morris/morris.js"></script>
+    <script src="assets/vendor/gauge/gauge.js"></script>
+    <script src="assets/vendor/snap-svg/snap.svg.js"></script>
+    <script src="assets/vendor/liquid-meter/liquid.meter.js"></script>
+    <script src="assets/vendor/jqvmap/jquery.vmap.js"></script>
+    <script src="assets/vendor/jqvmap/data/jquery.vmap.sampledata.js"></script>
+    <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>--%>
+
+
+    <!-- Theme Base, Components and Settings -->
+    <script src="assets/javascripts/theme.js"></script>
+
+    <!-- Theme Custom -->
+<%--    <script src="assets/javascripts/theme.custom.js"></script>--%>
+
+    <!-- Theme Initialization Files -->
+<%--    <script src="assets/javascripts/theme.init.js"></script>--%>
+
+
+    <!-- Examples -->
+<%--    <script src="assets/javascripts/dashboard/examples.dashboard.js"></script>--%>
+
+
+</body>
+</html>
+
